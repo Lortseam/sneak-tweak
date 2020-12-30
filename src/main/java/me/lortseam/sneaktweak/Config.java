@@ -13,12 +13,12 @@ public class Config implements ConfigCategory {
     private static final Config instance = new Config();
 
     @Getter
-    private boolean animationEnabled = true;
+    private boolean smoothingEnabled = true;
     @ConfigEntry.Bounded.Integer(min = 50, max = 300)
-    private int animationSpeedPercentage = 100;
+    private int speedPercentage = 100;
 
     public float getSpeedModifier() {
-        return animationEnabled ? animationSpeedPercentage / 100f : 1;
+        return speedPercentage / 100f;
     }
 
     @Override

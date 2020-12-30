@@ -1,7 +1,7 @@
 {
   "config.sneaktweak.title": "Sneak Tweak Konfiguration",
-  "config.sneaktweak.config.animationEnabled": "Sneak-Animation aktiviert",
-  "config.sneaktweak.config.animationSpeedPercentage": "Geschwindigkeit der Sneak-Animation in Prozent",
-  "config.sneaktweak.config.animationSpeedPercentage.tooltip.0": "Die Schnelligkeit der Sneak-Animation, angegeben in Prozent.",
-  "config.sneaktweak.config.animationSpeedPercentage.tooltip.1": "Werte über 200% lassen die Animation etwas federn."
+  "config.sneaktweak.config.smoothingEnabled": "Weiche Sneak-Animation aktiviert",
+  "config.sneaktweak.config.speedPercentage": "Schnelligkeit der Animation in Prozent",
+  "config.sneaktweak.config.speedPercentage.tooltip.0": "Die Schnelligkeit der weichen Sneak-Animation, angegeben in Prozent.",
+  "config.sneaktweak.config.speedPercentage.tooltip.1": "Werte über 200% lassen die Animation etwas federn."
 }

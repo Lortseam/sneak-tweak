@@ -21,7 +21,7 @@ public abstract class CameraMixin {
 
     @Inject(method = "updateEyeHeight", at = @At(value = "FIELD", opcode = Opcodes.GETFIELD, target = "Lnet/minecraft/client/render/Camera;cameraY:F", ordinal = 1), cancellable = true)
     public void sneaktweak$onCameraYModify(CallbackInfo ci) {
-        if (!Config.getInstance().isAnimationEnabled()) {
+        if (!Config.getInstance().isSmoothingEnabled()) {
             cameraY = focusedEntity.getStandingEyeHeight();
             ci.cancel();
         }
