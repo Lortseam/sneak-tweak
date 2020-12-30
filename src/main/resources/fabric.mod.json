@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "sneak-tweak",
+  "version": "${version}",
+  "name": "Sneak Tweak",
+  "description": "Tweaks the sneak animation",
+  "authors": [
+    "Lortseam"
+  ],
+  "contact": {
+    "email": "lortseam@gmail.com",
+    "sources": "https://gitlab.com/Lortseam/sneak-tweak",
+    "issues": "https://gitlab.com/Lortseam/sneak-tweak/-/issues"
+  },
+  "license": "Apache-2.0",
+  "environment": "client",
+  "entrypoints": {
+    "completeconfig": [
+      "me.lortseam.sneaktweak.SneakTweak"
+    ],
+    "modmenu": [
+      "me.lortseam.sneaktweak.SneakTweak"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "sneak-tweak.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "modmenu": "*"
+  }
+}
