@@ -14,7 +14,7 @@ public class Config implements ConfigCategory {
 
     @Getter
     private boolean animationEnabled = true;
-    @ConfigEntry.Bounded.Integer(min = 10, max = 250)
+    @ConfigEntry.Bounded.Integer(min = 10, max = 300)
     private int animationSpeedPercentage = 100;
     //TODO: Add bounce option
 
