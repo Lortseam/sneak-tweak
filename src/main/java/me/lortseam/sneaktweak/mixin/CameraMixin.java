@@ -20,7 +20,7 @@ public abstract class CameraMixin {
     @Shadow private Entity focusedEntity;
 
     @Inject(method = "updateEyeHeight", at = @At(value = "FIELD", opcode = Opcodes.GETFIELD, target = "Lnet/minecraft/client/render/Camera;cameraY:F", ordinal = 1), cancellable = true)
-    public void onCameraYModify(CallbackInfo ci) {
+    public void sneaktweak$onCameraYModify(CallbackInfo ci) {
         if (!Config.getInstance().isAnimationEnabled()) {
             cameraY = focusedEntity.getStandingEyeHeight();
             ci.cancel();
@@ -28,7 +28,7 @@ public abstract class CameraMixin {
     }
 
     @ModifyConstant(method = "updateEyeHeight", constant = @Constant(floatValue = 0.5f))
-    public float modifyCameraYSpeed(float modifier) {
+    public float sneaktweak$modifyCameraYSpeed(float modifier) {
         return modifier * Config.getInstance().getSpeedModifier();
     }
 

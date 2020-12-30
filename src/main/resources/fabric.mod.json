@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "sneak-tweak",
+  "id": "sneaktweak",
   "version": "${version}",
   "name": "Sneak Tweak",
   "description": "Tweaks the sneak animation",
@@ -24,7 +24,7 @@
   },
   "mixins": [
     {
-      "config": "sneak-tweak.mixins.json",
+      "config": "sneaktweak.mixins.json",
       "environment": "client"
     }
   ],
