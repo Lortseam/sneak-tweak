@@ -7,23 +7,33 @@ import me.lortseam.completeconfig.api.ConfigCategory;
 import me.lortseam.completeconfig.api.ConfigEntry;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class Config implements ConfigCategory {
+public final class Config{
 
-    @Getter
-    private static final Config instance = new Config();
+    public static final Animation ANIMATION = new Animation();
 
-    @Getter
-    private boolean smoothingEnabled = true;
-    @ConfigEntry.Bounded.Integer(min = 50, max = 300)
-    private int speedPercentage = 100;
+    @NoArgsConstructor(access = AccessLevel.PRIVATE)
+    public static final class Animation implements ConfigCategory {
 
-    public float getSpeedModifier() {
-        return speedPercentage / 100f;
-    }
+        @Getter
+        private boolean smoothingEnabled = true;
+        @ConfigEntry.Bounded.Integer(min = 50, max = 300)
+        private int speedPercentage = 100;
 
-    @Override
-    public boolean isConfigPOJO() {
-        return true;
+        public float getSpeedModifier() {
+            return speedPercentage / 100f;
+        }
+
+        //TODO: Remove in v2.0
+        @Override
+        public String getConfigCategoryID() {
+            return "config";
+        }
+
+        @Override
+        public boolean isConfigPOJO() {
+            return true;
+        }
+
     }
 
 }
