@@ -16,7 +16,7 @@ public final class Config implements ConfigEntryContainer {
     private static ConfigHandler handler;
     @Getter
     private static boolean smoothingEnabled = true;
-    @ConfigEntry.BoundedInteger(min = 50, max = 300)
+    @ConfigEntry.BoundedInteger(min = 25, max = 300)
     private static int speedPercentage = 100;
 
     public static void register() {
