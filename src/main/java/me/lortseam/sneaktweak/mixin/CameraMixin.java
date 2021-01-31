@@ -3,7 +3,6 @@ package me.lortseam.sneaktweak.mixin;
 import me.lortseam.sneaktweak.config.Config;
 import net.minecraft.client.render.Camera;
 import net.minecraft.entity.Entity;
-import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -16,20 +15,18 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class CameraMixin {
 
     @Shadow private float cameraY;
-
     @Shadow private Entity focusedEntity;
 
-    @Inject(method = "updateEyeHeight", at = @At(value = "FIELD", opcode = Opcodes.GETFIELD, target = "Lnet/minecraft/client/render/Camera;cameraY:F", ordinal = 1), cancellable = true)
-    public void sneaktweak$onCameraYModify(CallbackInfo ci) {
+    @Inject(method = "updateEyeHeight", at = @At(value = "FIELD", target = "Lnet/minecraft/client/render/Camera;cameraY:F", ordinal = 0))
+    public void sneaktweak$modifyCameraY(CallbackInfo ci) {
         if (!Config.isSmoothingEnabled()) {
             cameraY = focusedEntity.getStandingEyeHeight();
-            ci.cancel();
         }
     }
 
     @ModifyConstant(method = "updateEyeHeight", constant = @Constant(floatValue = 0.5f))
     public float sneaktweak$modifyCameraYSpeed(float modifier) {
-        return modifier * Config.getSpeedModifier();
+        return Config.isSmoothingEnabled() ? modifier * Config.getSpeedModifier() : 0;
     }
 
 }
