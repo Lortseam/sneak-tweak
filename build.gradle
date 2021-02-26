@@ -26,7 +26,6 @@ dependencies {
 
     modImplementation("com.gitlab.Lortseam:completeconfig:${project.completeconfig_version}")
     include("com.gitlab.Lortseam:completeconfig:${project.completeconfig_version}")
-    include("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}")
     modImplementation("io.github.prospector:modmenu:${project.modmenu_version}")
 
     compileOnly("org.projectlombok:lombok:${project.lombok_version}")
