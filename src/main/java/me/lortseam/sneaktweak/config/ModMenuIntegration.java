@@ -1,13 +1,18 @@
 package me.lortseam.sneaktweak.config;
 
-import io.github.prospector.modmenu.api.ConfigScreenFactory;
-import io.github.prospector.modmenu.api.ModMenuApi;
+import com.terraformersmc.modmenu.api.ConfigScreenFactory;
+import com.terraformersmc.modmenu.api.ModMenuApi;
+import me.lortseam.completeconfig.gui.ConfigScreenBuilder;
+import me.lortseam.completeconfig.gui.cloth.ClothConfigScreenBuilder;
+import me.lortseam.sneaktweak.SneakTweak;
 
 public class ModMenuIntegration implements ModMenuApi {
 
+    private final ConfigScreenBuilder screenBuilder = new ClothConfigScreenBuilder();
+
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return parentScreen -> Config.getHandler().buildScreen(parentScreen);
+        return parent -> screenBuilder.build(parent, SneakTweak.getConfig());
     }
 
 }
