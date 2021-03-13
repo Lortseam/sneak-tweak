@@ -1,6 +1,9 @@
 {
-  "config.sneaktweak.smoothingEnabled": "Smooth sneak animation enabled",
+  "config.sneaktweak.smoothingEnabled": "Smooth sneak animation",
+  "config.sneaktweak.smoothingEnabled.true": "Enabled",
+  "config.sneaktweak.smoothingEnabled.false": "Disabled",
   "config.sneaktweak.speedPercentage": "Animation speed percentage",
-  "config.sneaktweak.speedPercentage.tooltip.0": "The speed of the smooth sneak animation, stated as a percentage.",
-  "config.sneaktweak.speedPercentage.tooltip.1": "Values above 200% will make the animation bounce a little."
+  "config.sneaktweak.speedPercentage.tooltip.0": "The speed of the smooth sneak animation, stated in percentage terms.",
+  "config.sneaktweak.speedPercentage.tooltip.1": "100% is the default speed.",
+  "config.sneaktweak.speedPercentage.tooltip.2": "Values above 200% will make the animation bounce a little."
 }
