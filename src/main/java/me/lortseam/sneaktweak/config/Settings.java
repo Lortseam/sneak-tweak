@@ -11,6 +11,7 @@ public final class Settings implements ConfigContainer {
     @Getter
     private static boolean smoothingEnabled = true;
     @ConfigEntry.BoundedInteger(min = 25, max = 300)
+    @ConfigEntry.Slider
     private static int speedPercentage = 100;
 
     public static float getSpeedModifier() {
