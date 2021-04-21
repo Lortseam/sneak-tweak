@@ -17,9 +17,6 @@
   "entrypoints": {
     "client": [
       "me.lortseam.sneaktweak.SneakTweak"
-    ],
-    "modmenu": [
-      "me.lortseam.sneaktweak.config.ModMenuIntegration"
     ]
   },
   "mixins": [
