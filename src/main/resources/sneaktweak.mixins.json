@@ -4,7 +4,8 @@
   "package": "me.lortseam.sneaktweak.mixin",
   "compatibilityLevel": "JAVA_8",
   "client": [
-    "CameraMixin"
+    "CameraMixin",
+    "ClientPlayNetworkHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
