@@ -28,9 +28,5 @@
   "depends": {
     "fabricloader": ">=0.7.4",
     "completeconfig": ">=0.16.0"
-  },
-  "suggests": {
-    "modmenu": "*",
-    "cloth-config2": "*"
   }
 }
