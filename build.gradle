@@ -28,7 +28,6 @@ dependencies {
     modImplementation("net.fabricmc:fabric-loader:${project.loader_version}")
 
     modImplementation("com.gitlab.Lortseam:completeconfig:${project.completeconfig_version}")
-    include("com.gitlab.Lortseam:completeconfig:${project.completeconfig_version}")
 }
 
 processResources {
