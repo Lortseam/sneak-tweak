@@ -1,8 +1,10 @@
 package me.lortseam.sneaktweak;
 
-import me.lortseam.completeconfig.data.Config;
+import me.lortseam.completeconfig.gui.ConfigScreenBuilder;
+import me.lortseam.completeconfig.gui.cloth.ClothConfigScreenBuilder;
 import me.lortseam.sneaktweak.config.Settings;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.loader.api.FabricLoader;
 
 public class SneakTweak implements ClientModInitializer {
 
@@ -10,9 +12,10 @@ public class SneakTweak implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        Config.builder(MOD_ID)
-                .add(new Settings())
-                .build();
+        new Settings().load();
+        if (FabricLoader.getInstance().isModLoaded("cloth-config2")) {
+            ConfigScreenBuilder.setMain(MOD_ID, new ClothConfigScreenBuilder());
+        }
     }
 
 }
