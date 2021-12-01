@@ -13,7 +13,7 @@ public class SneakTweak implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         new Settings().load();
-        if (FabricLoader.getInstance().isModLoaded("cloth-config2")) {
+        if (FabricLoader.getInstance().isModLoaded("cloth-config")) {
             ConfigScreenBuilder.setMain(MOD_ID, new ClothConfigScreenBuilder());
         }
     }
