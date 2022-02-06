@@ -1,6 +1,7 @@
 package me.lortseam.sneaktweak.config;
 
 import lombok.Getter;
+import lombok.experimental.Accessors;
 import me.lortseam.completeconfig.api.ConfigContainer;
 import me.lortseam.completeconfig.api.ConfigEntries;
 import me.lortseam.completeconfig.api.ConfigEntry;
@@ -15,6 +16,9 @@ public final class Settings extends Config implements ConfigContainer {
     @ConfigEntry.BoundedInteger(min = 25, max = 300)
     @ConfigEntry.Slider
     private static int speedPercentage = 100;
+    @Accessors(fluent = true)
+    @Getter
+    private static boolean increaseSneakingHeight = false;
 
     public Settings() {
         super(SneakTweak.MOD_ID);
