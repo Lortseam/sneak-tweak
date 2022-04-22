@@ -2,7 +2,7 @@ package me.lortseam.sneaktweak;
 
 import me.lortseam.completeconfig.gui.ConfigScreenBuilder;
 import me.lortseam.completeconfig.gui.cloth.ClothConfigScreenBuilder;
-import me.lortseam.sneaktweak.config.Settings;
+import me.lortseam.sneaktweak.config.ModConfig;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.loader.api.FabricLoader;
@@ -14,12 +14,12 @@ public class SneakTweak implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        new Settings().load();
+        new ModConfig().load();
         if (FabricLoader.getInstance().isModLoaded("cloth-config")) {
             ConfigScreenBuilder.setMain(MOD_ID, new ClothConfigScreenBuilder());
         }
         ClientTickEvents.END_WORLD_TICK.register(world -> {
-            if (Settings.increaseSneakingHeight()) {
+            if (ModConfig.increaseSneakingHeight()) {
                 MinecraftClient.getInstance().player.calculateDimensions();
             }
         });

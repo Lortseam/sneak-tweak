@@ -9,7 +9,7 @@ import me.lortseam.completeconfig.data.Config;
 import me.lortseam.sneaktweak.SneakTweak;
 
 @ConfigEntries
-public final class Settings extends Config implements ConfigContainer {
+public final class ModConfig extends Config implements ConfigContainer {
 
     @Getter
     private static boolean smoothingEnabled = true;
@@ -20,7 +20,7 @@ public final class Settings extends Config implements ConfigContainer {
     @Getter
     private static boolean increaseSneakingHeight = false;
 
-    public Settings() {
+    public ModConfig() {
         super(SneakTweak.MOD_ID);
     }
 
