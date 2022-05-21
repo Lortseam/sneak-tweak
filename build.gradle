@@ -20,6 +20,9 @@ repositories {
     maven {
         url "https://maven.shedaniel.me/"
     }
+    maven {
+        url "https://maven.siphalor.de/"
+    }
 }
 
 dependencies {
