@@ -8,7 +8,7 @@ import me.lortseam.completeconfig.api.ConfigEntry;
 import me.lortseam.completeconfig.data.Config;
 import me.lortseam.sneaktweak.SneakTweak;
 
-@ConfigEntries
+@ConfigEntries(includeAll = true)
 public final class ModConfig extends Config implements ConfigContainer {
 
     @Getter
