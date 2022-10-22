@@ -9,8 +9,8 @@
   ],
   "contact": {
     "email": "lortseam@gmail.com",
-    "sources": "https://gitlab.com/Lortseam/sneak-tweak",
-    "issues": "https://gitlab.com/Lortseam/sneak-tweak/-/issues"
+    "sources": "https://github.com/Lortseam/sneak-tweak",
+    "issues": "https://github.com/Lortseam/sneak-tweak/issues"
   },
   "license": "Apache-2.0",
   "environment": "client",
