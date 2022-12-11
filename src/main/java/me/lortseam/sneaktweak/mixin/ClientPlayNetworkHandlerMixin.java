@@ -21,12 +21,12 @@ public abstract class ClientPlayNetworkHandlerMixin {
 
     @Shadow @Final private MinecraftClient client;
 
-    @Redirect(method = "onEntityTrackerUpdate", at = @At(value = "INVOKE", target = "Lnet/minecraft/network/packet/s2c/play/EntityTrackerUpdateS2CPacket;getTrackedValues()Ljava/util/List;", ordinal = 1))
-    public List<DataTracker.Entry<?>> sneaktweak$modifyTrackedValues(EntityTrackerUpdateS2CPacket packet) {
+    @Redirect(method = "onEntityTrackerUpdate", at = @At(value = "INVOKE", target = "Lnet/minecraft/network/packet/s2c/play/EntityTrackerUpdateS2CPacket;trackedValues()Ljava/util/List;", ordinal = 0))
+    public List<DataTracker.SerializedEntry<?>> sneaktweak$modifyTrackedValues(EntityTrackerUpdateS2CPacket packet) {
         if (world.getEntityById(packet.id()).equals(client.player)) {
-            packet.getTrackedValues().removeIf(entry -> entry.getData().getType().equals(TrackedDataHandlerRegistry.ENTITY_POSE));
+            packet.trackedValues().removeIf(entry -> entry.handler().equals(TrackedDataHandlerRegistry.ENTITY_POSE));
         }
-        return packet.getTrackedValues();
+        return packet.trackedValues();
     }
 
 }
