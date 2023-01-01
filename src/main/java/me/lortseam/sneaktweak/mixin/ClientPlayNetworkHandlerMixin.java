@@ -21,6 +21,7 @@ public abstract class ClientPlayNetworkHandlerMixin {
 
     @Shadow @Final private MinecraftClient client;
 
+    // Fixes https://bugs.mojang.com/browse/MC-159163
     @Redirect(method = "onEntityTrackerUpdate", at = @At(value = "INVOKE", target = "Lnet/minecraft/network/packet/s2c/play/EntityTrackerUpdateS2CPacket;trackedValues()Ljava/util/List;", ordinal = 0))
     public List<DataTracker.SerializedEntry<?>> sneaktweak$modifyTrackedValues(EntityTrackerUpdateS2CPacket packet) {
         if (world.getEntityById(packet.id()).equals(client.player)) {
