@@ -22,10 +22,12 @@ public abstract class CameraMixin {
 
     @Inject(method = "updateEyeHeight", at = @At(value = "HEAD"))
     public void sneaktweak$storePose(CallbackInfo ci) {
-        var pose = focusedEntity.getPose();
-        if(pose != lastPoses[0]) {
-            lastPoses[1] = lastPoses[0];
-            lastPoses[0] = pose;
+        if (this.focusedEntity != null) {
+            var pose = focusedEntity.getPose();
+            if (pose != lastPoses[0]) {
+                lastPoses[1] = lastPoses[0];
+                lastPoses[0] = pose;
+            }
         }
     }
 
