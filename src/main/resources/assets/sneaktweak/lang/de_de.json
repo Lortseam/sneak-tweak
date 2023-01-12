@@ -3,11 +3,9 @@
   "config.sneaktweak.smoothingEnabled.true": "Aktiviert",
   "config.sneaktweak.smoothingEnabled.false": "Deaktiviert",
   "config.sneaktweak.speedPercentage": "Schnelligkeit der Animation",
-  "config.sneaktweak.speedPercentage.tooltip.0": "Die Schnelligkeit der weichen Sneak-Animation.",
-  "config.sneaktweak.speedPercentage.tooltip.1": "100% entspricht der Standard-Schnelligkeit.",
-  "config.sneaktweak.speedPercentage.tooltip.2": "Werte über 200% lassen die Animation etwas federn.",
+  "config.sneaktweak.speedPercentage.description": "Die Schnelligkeit der weichen Sneak-Animation.\n100% entspricht der Standard-Schnelligkeit.\nWerte über 200% lassen die Animation etwas federn.",
   "config.sneaktweak.increaseSneakingHeight": "Sneak-Höhe erhöhen",
-  "config.sneaktweak.increaseSneakingHeight.tooltip": "Erhöht die Augen-Höhe während des Sneakens wie sie vor dem Minecraft 1.14 Update war.",
+  "config.sneaktweak.increaseSneakingHeight.description": "Erhöht die Augen-Höhe während des Sneakens wie sie vor dem Minecraft 1.14 Update war.",
   "config.sneaktweak.increaseSneakingHeight.true": "Aktiviert",
   "config.sneaktweak.increaseSneakingHeight.false": "Deaktiviert"
 }
