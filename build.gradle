@@ -12,9 +12,6 @@ group = project.maven_group
 
 repositories {
     maven {
-        url 'https://jitpack.io'
-    }
-    maven {
         url "https://maven.terraformersmc.com/"
     }
     maven {
@@ -22,6 +19,9 @@ repositories {
     }
     maven {
         url "https://maven.siphalor.de/"
+    }
+    maven {
+        url 'https://jitpack.io'
     }
 }
 
@@ -32,6 +32,7 @@ dependencies {
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:$fabric_version"
     modImplementation("com.github.Lortseam.completeconfig:gui-cloth:$completeconfig_version")
+    modImplementation("com.terraformersmc:modmenu:$modmenu_version")
 }
 
 processResources {
