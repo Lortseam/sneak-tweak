@@ -2,11 +2,14 @@
   "config.sneaktweak.smoothingEnabled": "Smooth sneak animation",
   "config.sneaktweak.smoothingEnabled.true": "Enabled",
   "config.sneaktweak.smoothingEnabled.false": "Disabled",
-  "config.sneaktweak.speedPercentage": "Animation speed",
+  "config.sneaktweak.speedPercentage": "Animation Speed",
   "config.sneaktweak.speedPercentage.value": "%d%%",
   "config.sneaktweak.speedPercentage.description": "The speed of the smooth sneak animation.\n100% is the default speed.\nValues above 200% will make the animation bounce a little.",
-  "config.sneaktweak.increaseSneakingHeight": "Increase sneaking height",
-  "config.sneaktweak.increaseSneakingHeight.description": "Increases the sneaking eye height to where it was before the Minecraft 1.14 update.",
-  "config.sneaktweak.increaseSneakingHeight.true": "Enabled",
-  "config.sneaktweak.increaseSneakingHeight.false": "Disabled"
+  "config.sneaktweak.sneakingEyeHeightPreset": "Sneaking eye height",
+  "config.sneaktweak.sneakingEyeHeightPreset.default": "Default",
+  "config.sneaktweak.sneakingEyeHeightPreset.pre114": "Pre 1.14",
+  "config.sneaktweak.sneakingEyeHeightPreset.pre19": "Pre 1.9",
+  "config.sneaktweak.sneakingEyeHeightPreset.custom": "Custom",
+  "config.sneaktweak.customSneakingEyeHeight": "Custom sneaking eye height",
+  "config.sneaktweak.modifyThirdPersonSneakingEyeHeight": "Modify sneaking eye height in third person view"
 }

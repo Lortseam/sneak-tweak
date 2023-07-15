@@ -17,9 +17,8 @@ public class SneakTweak implements ClientModInitializer {
     public void onInitializeClient() {
         config.load();
         ClientTickEvents.END_WORLD_TICK.register(world -> {
-            if (ModConfig.increaseSneakingHeight()) {
-                MinecraftClient.getInstance().player.calculateDimensions();
-            }
+            // Update sneaking eye height
+            MinecraftClient.getInstance().player.calculateDimensions();
         });
     }
 
