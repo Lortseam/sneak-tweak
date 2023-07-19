@@ -5,6 +5,7 @@
   "config.sneaktweak.speedPercentage": "Schnelligkeit der Animation",
   "config.sneaktweak.speedPercentage.description": "Die Schnelligkeit der weichen Sneak-Animation.\n100% entspricht der Standard-Schnelligkeit.\nWerte über 200% lassen die Animation etwas federn.",
   "config.sneaktweak.sneakingEyeHeightPreset": "Sneak Augen-Höhe",
+  "config.sneaktweak.sneakingEyeHeightPreset.description": "Die Augen-Höhe beim Sneaken.\n\nStandard: Die Standardhöhe\nVor 1.14: Die Höhe, die vor Minecraft 1.14 verwendet wurde\nVor 1.9: Die Höhe, die vor Minecraft 1.9 verwendet wurde\nBenutzerdefiniert: Eine benutzerdefinierte Höhe, die in der nachfolgenden Einstellung angegeben werden kann",
   "config.sneaktweak.sneakingEyeHeightPreset.default": "Standard",
   "config.sneaktweak.sneakingEyeHeightPreset.pre114": "Vor 1.14",
   "config.sneaktweak.sneakingEyeHeightPreset.pre19": "Vor 1.9",

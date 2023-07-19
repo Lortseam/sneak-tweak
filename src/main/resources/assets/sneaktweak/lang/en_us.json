@@ -6,6 +6,7 @@
   "config.sneaktweak.speedPercentage.value": "%d%%",
   "config.sneaktweak.speedPercentage.description": "The speed of the smooth sneak animation.\n100% is the default speed.\nValues above 200% will make the animation bounce a little.",
   "config.sneaktweak.sneakingEyeHeightPreset": "Sneaking eye height",
+  "config.sneaktweak.sneakingEyeHeightPreset.description": "The eye height when the player is sneaking.\n\nDefault: The default height\nPre 1.14: The height used before Minecraft 1.14\nPre 1.9: The height used before Minecraft 1.9\nCustom: The custom height specified in the setting below",
   "config.sneaktweak.sneakingEyeHeightPreset.default": "Default",
   "config.sneaktweak.sneakingEyeHeightPreset.pre114": "Pre 1.14",
   "config.sneaktweak.sneakingEyeHeightPreset.pre19": "Pre 1.9",

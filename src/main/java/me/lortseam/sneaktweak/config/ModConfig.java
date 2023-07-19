@@ -16,7 +16,6 @@ public final class ModConfig extends Config implements ConfigContainer {
     @ConfigEntry.BoundedInteger(min = 25, max = 300)
     @ConfigEntry.Slider
     private static int speedPercentage = 100;
-    @ConfigEntry.Dropdown
     private static SneakingEyeHeightType sneakingEyeHeightPreset = SneakingEyeHeightType.DEFAULT;
     @ConfigEntry.BoundedFloat(min = 0, max = 1.8f)
     private static float customSneakingEyeHeight = 1.27f;

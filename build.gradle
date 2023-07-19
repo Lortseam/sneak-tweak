@@ -11,6 +11,7 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
+    mavenLocal()
     maven {
         url "https://maven.terraformersmc.com/"
     }
@@ -19,6 +20,9 @@ repositories {
     }
     maven {
         url "https://maven.siphalor.de/"
+    }
+    maven {
+        url "https://maven.isxander.dev/releases"
     }
     maven {
         url 'https://jitpack.io'
@@ -31,7 +35,7 @@ dependencies {
     modImplementation("net.fabricmc:fabric-loader:$loader_version")
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:$fabric_version"
-    modImplementation("com.github.Lortseam.completeconfig:gui-cloth:$completeconfig_version")
+    modImplementation("com.github.Lortseam.completeconfig:gui-yacl:$completeconfig_version")
     modImplementation("com.terraformersmc:modmenu:$modmenu_version")
 }
 
