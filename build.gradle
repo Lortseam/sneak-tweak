@@ -13,19 +13,19 @@ group = project.maven_group
 repositories {
     mavenLocal()
     maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
+    maven {
         url "https://maven.terraformersmc.com/"
     }
     maven {
         url "https://maven.shedaniel.me/"
     }
     maven {
-        url "https://maven.siphalor.de/"
-    }
-    maven {
         url "https://maven.isxander.dev/releases"
     }
     maven {
-        url 'https://jitpack.io'
+        url "https://jitpack.io"
     }
 }
 
