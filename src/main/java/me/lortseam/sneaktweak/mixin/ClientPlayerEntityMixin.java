@@ -19,7 +19,8 @@ public class ClientPlayerEntityMixin extends AbstractClientPlayerEntity {
     @Override
     public float getActiveEyeHeight(EntityPose pose, EntityDimensions dimensions) {
         float height = super.getActiveEyeHeight(pose, dimensions);
-        if (pose == EntityPose.CROUCHING && wouldPoseNotCollide(EntityPose.STANDING)) { // Don't modify height if player stands under a block
+        // Don't modify height if player stands under a block
+        if (pose == EntityPose.CROUCHING && canChangeIntoPose(EntityPose.STANDING)) {
             height = ModConfig.modifySneakingEyeHeight(height);
         }
         return height;
